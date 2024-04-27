@@ -1,0 +1,379 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body::before{
+    background: url(architecture.png) center/cover fixed no-repeat;
+    content: "";
+    filter: blur(1px);
+    height: 100%;
+    left: 0;
+    opacity: 0.10;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+
+.header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(finalcity2.png);
+    background-size: cover;
+    background-position: cover;
+}
+
+.navbar {
+    text-align: right;
+    display: flex;
+    margin: 20px;
+}
+
+.navbar a {
+    height: 10px;
+    width: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    position: relative;
+}
+
+.navbar a:hover {
+    color: #747373;
+}
+
+.navbar a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: rgb(223, 3, 3);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 1;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after{
+    width: 70%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+.logo {
+    flex: 1; 
+}
+
+.logo a {
+    font-size: 1.5em; 
+}
+
+.logo img {
+    width: 230px;
+    height: auto;
+    margin-left: 25px;
+}
+
+.wrapper{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+
+.opening-text{
+    width: auto;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.opening-text h1{
+    font-size: 55px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.opening-text p{
+    color: white;
+    margin: 10px 0 40px;
+    font-size: 14px;
+}
+
+a.button-1{
+    color: whitesmoke;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    margin-top: -2px;
+	margin-left: 10px;
+    text-align: center;
+    width: 245px;
+	margin: 10px;
+}
+
+a.button-1:hover{
+    transform: scale(1.2);
+    border: 1px solid rgb(223, 3, 3);
+    background: rgb(223, 3, 3);
+    color: white;
+    transition: 0.5s;
+}
+
+.opening-text2{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.opening-text2 img.imageintro {
+    align-content: center;
+    margin: auto;
+    width: 500px;
+}
+
+.opening-text2 p {
+    color: rgba(0, 0, 0, 0.813);
+    font-size: 18px;
+    line-height: 2.5;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-wrapper div {
+    width: 50%;
+    aspect-ratio: 16/9;
+    overflow: hidden; 
+    margin: 0 3px;
+    box-sizing: border-box;
+    
+}
+
+.image-wrapper div img {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    box-sizing: border-box;
+}
+
+.features{
+    background-color: rgba(1, 7, 37, 0.85);
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5%;
+    padding: 70px;
+} 
+
+.features img{
+    width: 400px;
+    height: auto;
+    align-content: center;
+    margin-top: 0%;
+}
+
+.features p.p1{
+    color: rgb(186, 184, 184);
+    line-height: 2em;
+    list-style:lower-greek;
+    font-size: 17px;
+    padding: 10px;
+    text-align: center;
+}
+
+.features p{
+    color: rgb(6, 6, 6);
+    line-height: 2em;
+    list-style:lower-greek;
+    font-size: 17px;
+    padding: 10px;
+    text-align: center;
+}
+
+.feature:hover{
+    transform: scale(1.10); 
+    transition: transform 0.3s ease-in-out; 
+    box-shadow: 0 0 20px rgba(10, 10, 10, 0.1);
+}
+
+.feature .fa-solid {
+    color: black; 
+    font-size: 50px; 
+    transition: color 0.4s ease-in-out;
+}
+
+.attribute{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.attribute div{
+    background: #f3dada;
+    border-radius: 12px;
+    box-sizing: border-box;
+    flex-basis: 32%;
+    padding: 25px 12px;
+}
+
+.gallery{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 5%;
+}
+
+.gallery img{
+    width: 300px;
+    height: auto;
+    align-content: center;
+    margin: auto;
+}
+
+.attribute1,
+.attribute2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+.attribute1 .picture_combo1,
+.attribute2 .picture_combo2 {
+    border-radius: 15px;
+    flex-basis: calc(49% - 20px); 
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.attribute1 .picture_combo1 img,
+.attribute2 .picture_combo2 img {
+    border-radius: 20px;
+    height: 300px;
+    width: 100%;
+    transform: transform 0.5s ease;
+}
+
+.attribute1 .picture_combo1:hover img,
+.attribute2 .picture_combo2:hover img {
+    filter: blur(5px);
+}
+
+.attribute1 .layer, 
+.attribute2 .layer{
+    background: transparent;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.attribute1 .layer:hover,
+.attribute2 .layer:hover{
+    background: rgb(223, 3, 3, 0.7);
+}
+
+.attribute1 .picture_combo1 .layer p,
+.attribute2 .picture_combo2 .layer p{
+    background: transparent;
+    bottom: 0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    transition: 0.3s;
+    transform: translateX(-50%);
+    width: 100%;
+    line-height: 2;
+    
+}
+
+.attribute1 .picture_combo1 .layer:hover p,
+.attribute2 .picture_combo2 .layer:hover p{
+    bottom: 30%;
+    opacity: 1;
+}
+
+footer {
+    height: 40vh;
+    width: 100vw;
+    /* background-image: url(city-night.jpg); */
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(city-night.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+footer h2 {
+    text-align: center;
+    padding-top: 2%;
+    color: rgb(231, 231, 231);
+}
+
+.footer-link {
+    padding-top: 8%;
+    margin: 2% 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
